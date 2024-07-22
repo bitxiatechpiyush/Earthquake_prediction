@@ -95,7 +95,6 @@
         #result strong {
             color: #2c3e50;
         }
-
         #map {
             height: 400px;
             width: 100%;
@@ -323,8 +322,6 @@
             getPrediction(lat, lng);
         });
 
-        window.addEventListener('load', useCurrentLocation);
-
         function checkCoordinatesChange() {
             const currentLat = parseFloat(latitudeInput.value);
             const currentLon = parseFloat(longitudeInput.value);
@@ -339,6 +336,8 @@
 
         latitudeInput.addEventListener('input', checkCoordinatesChange);
         longitudeInput.addEventListener('input', checkCoordinatesChange);
+
+        window.addEventListener('load', useCurrentLocation);
     </script>
 </body>
 </html>
